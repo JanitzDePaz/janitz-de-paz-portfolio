@@ -1,10 +1,16 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import { Header } from './components/layout/Header'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import { Header } from "./components/layout/Header";
+import { SobreMi } from "./components/features/SobreMi";
 
-createRoot(document.getElementById('root')!).render(
+createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <Header></Header>
+    <>
+      <Header />
+      <main className="flex flex-col bg-(--bg-color)">
+        <SobreMi />
+      </main>
+    </>
   </StrictMode>,
-)
+);
