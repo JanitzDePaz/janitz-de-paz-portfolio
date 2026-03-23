@@ -1,4 +1,4 @@
-export const SobreMi = () => (
+export const AboutMe = () => (
   <section className="mt-(--header-height)">
     <div className="w-3/5 p-20 grid grid-cols-[0.3fr_0.7fr] grid-rows-2 border border-(--primary-border) rounded-2xl">
       <img src="" alt="" className="aspect-square min-w-40 rounded-full border-2" />
@@ -17,4 +17,3 @@ export const SobreMi = () => (
     </div>
   </section>
 );
-ç
