@@ -7,7 +7,7 @@
   --text-muted: #cacaca;
   --accent: #3b82f6;
 
-  --header-bg: rgba(10, 10, 11, 0.8);
+  --header-bg: rgb(27, 27, 29);
   --header-height: 7vh;
   color: #f4f4f5;
 }

@@ -8,9 +8,9 @@ import { useShallow } from "zustand/shallow";
 export const Navbar = () => {
   const width = headerMenu(useShallow((s) => s.width));
   const toggleMenu = () => headerMenu.getState().toggleMenu();
-  console.log(width);
+  const mobileWidth = headerMenu.getState().mobileWidth
   return (
-    <header className="fixed inset-0 h-(--header-height) bg-(--header-bg) flex justify-around items-center border-b border-(--primary-border) z-50">
+    <div className="relative h-(--header-height) w-full bg-(--header-bg) flex justify-around items-center border-b border-(--primary-border) z-50">
       <div className="h-4/5 flex items-center justify-between gap-2">
         <img
           src={squarePlaceholder}
@@ -19,7 +19,7 @@ export const Navbar = () => {
         />
         <h1>Janitz De Paz</h1>
       </div>
-      {width < 800 ? (
+      {width < mobileWidth ? (
         <>
           <button
             className={clsx("aspect-square h-2/5 z-30")}
@@ -45,6 +45,6 @@ export const Navbar = () => {
           ))}
         </ul>
       )}
-    </header>
+    </div>
   );
 };
