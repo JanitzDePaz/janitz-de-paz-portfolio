@@ -1,15 +1,20 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
 :root {
-  --bg-color: #0a0a0b;
+  --bg-color: #212122;
   --card-bg: #161618;
   --primary-border: rgba(56, 189, 248, 0.149);
   --text-main: #f4f4f5;
   --text-muted: #cacaca;
-  --accent: #3b82f6;
+  --accent: #38bdf8;
 
   --header-bg: rgb(27, 27, 29);
   --header-height: 7vh;
   color: #f4f4f5;
+
+  --font-titles: "Montserrat", sans-serif;
+  --font-body: "Roboto", sans-serif;
 }
 
 section {
@@ -17,4 +22,35 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.title {
+  font-family: (var(--font-titles));
+  font-weight: 700;
+}
+
+.subtitle {
+  font-family: (var(--font-body));
+  font-weight: 700;
+}
+
+.primary-btn {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1rem;
+  background-color: white;
+  color: black;
+  padding-inline: 4rem;
+  padding-block: 0.5rem;
+  border-radius: 9999px;
+  transition: transform 0.2s ease;
+}
+
+.primary-btn:hover {
+  background-color: #cacaca;
+  transform: scale(1.03);
+}
+
+.primary-btn:active {
+  transform: scale(0.95);
 }
