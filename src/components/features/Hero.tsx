@@ -1,4 +1,5 @@
 import arrowDown from "../../assets/icons/arrowDown.svg";
+import { PrimaryButton } from "../ui/PrimaryButton";
 import { Spotlight } from "../ui/Spotlight";
 export const Hero = () => {
   return (
@@ -8,9 +9,7 @@ export const Hero = () => {
         <h2 className="text-3xl text-(--accent)  subtitle">
           React & TypeScript <br /> developer
         </h2>
-        <a href="#SobreMi" className="primary-btn transition-colors">
-          <button>Conoceme</button>
-        </a>
+        <PrimaryButton href="#SobreMi">Conóceme</PrimaryButton>
         <a href="#SobreMi">
           <img src={arrowDown} alt="Flecha direccional" />
         </a>

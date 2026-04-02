@@ -33,24 +33,3 @@ section {
   font-family: (var(--font-body));
   font-weight: 700;
 }
-
-.primary-btn {
-  font-family: var(--font-body);
-  font-weight: 600;
-  font-size: 1rem;
-  background-color: white;
-  color: black;
-  padding-inline: 4rem;
-  padding-block: 0.5rem;
-  border-radius: 9999px;
-  transition: transform 0.2s ease;
-}
-
-.primary-btn:hover {
-  background-color: #cacaca;
-  transform: scale(1.03);
-}
-
-.primary-btn:active {
-  transform: scale(0.95);
-}
