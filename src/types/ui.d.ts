@@ -5,6 +5,6 @@ type SpotlightTypes = {
 };
 type PrimaryButtonType = {
   href?: string;
-  children: string;
-  className: string;
+  children: React.ReactNode;
+  className?: string;
 };
