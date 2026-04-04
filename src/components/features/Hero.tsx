@@ -3,10 +3,12 @@ import { PrimaryButton } from "../ui/PrimaryButton";
 import { Spotlight } from "../ui/Spotlight";
 export const Hero = () => {
   return (
-    <section className="flex justify-center items-center text-center relative">
+    <section className="flex justify-center items-center text-center overflow-hidden relative">
       <div className="flex flex-col gap-5 justify-center items-center">
-        <h1 className="text-5xl title">Janitz De Paz</h1>
-        <h2 className="text-3xl text-(--accent)  subtitle">
+        <h1 className="text-3xl sm:text-5xl xl:text-6xl title">
+          Janitz De Paz
+        </h1>
+        <h2 className="text-xl sm:text-3xl xl:text-4xl text-(--accent) subtitle">
           React & TypeScript <br /> developer
         </h2>
         <PrimaryButton href="#SobreMi">Conóceme</PrimaryButton>
