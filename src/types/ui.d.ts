@@ -8,3 +8,7 @@ type PrimaryButtonType = {
   children: React.ReactNode;
   className?: string;
 };
+type TitlesTypes = {
+  children: React.ReactNode;
+  className?: string;
+};
