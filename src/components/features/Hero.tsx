@@ -4,6 +4,8 @@ import { PrimaryButton } from "../ui/PrimaryButton";
 import { Spotlight } from "../ui/Spotlight";
 import { scrollAnimation } from "../../animations/scrollAnimation";
 import { gsap } from "gsap";
+import { Title } from "../ui/Title";
+import { Subtitle } from "../ui/Subtitle";
 export const Hero = () => {
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -24,12 +26,12 @@ export const Hero = () => {
   return (
     <section className="flex justify-center items-center text-center overflow-hidden relative">
       <div className="flex flex-col gap-8 justify-center items-center">
-        <h1 className="text-3xl sm:text-5xl xl:text-6xl title anim">
+        <Title className="anim">
           Janitz De Paz
-        </h1>
-        <h2 className="text-xl sm:text-3xl xl:text-4xl text-(--accent) subtitle anim">
+        </Title>
+        <Subtitle className="anim">
           React & TypeScript <br /> developer
-        </h2>
+        </Subtitle>
         <div className="anim">
           <PrimaryButton href="#SobreMi">Conóceme</PrimaryButton>
         </div>
