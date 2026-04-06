@@ -19,7 +19,7 @@ export const Header = () => {
   }, [setWidth, setMenu]);
 
   return (
-    <header className="fixed inset-0 h-(--header-height)">
+    <header className="fixed inset-0 h-(--header-height) z-50">
       <Navbar />
       <MobileMenu />
     </header>
