@@ -5,6 +5,7 @@ import { useShallow } from "zustand/shallow";
 
 export const MobileMenu = () => {
   const openMenu = headerMenu(useShallow((s) => s.openMenu));
+  const setMenu = headerMenu.getState().setMenu
   const width = headerMenu((s) => s.width);
   const mobileWidth = headerMenu.getState().mobileWidth;
 
@@ -21,8 +22,9 @@ export const MobileMenu = () => {
           <li
             key={item.id}
             className="text-(--text-muted) hover:text-(--text-main)"
+            
           >
-            <a href={item.link}>{item.name}</a>
+            <a href={item.link} onClick={() => setMenu(false)}>{item.name}</a>
           </li>
         ))}
       </ul>
