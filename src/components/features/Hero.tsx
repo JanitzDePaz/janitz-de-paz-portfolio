@@ -40,14 +40,14 @@ export const Hero = () => {
         </a>
       </div>
       <Spotlight
-        color="bg-sky-500/20"
-        position="top-20 right-0"
-        size="w-36 h-36 lg:w-72 lg:h-72"
+        color="bg-sky-500/60"
+        position="top-40 lg:top-20 -right-18 lg:right-10"
+        size="w-36 h-36 lg:w-60 lg:h-60"
       />
       <Spotlight
-        color="bg-sky-500/20"
-        position="bottom-20 left-0"
-        size="w-36 h-36 lg:w-72 lg:h-72"
+        color="bg-sky-500/60"
+        position="bottom-40 lg:bottom-30 -left-18 lg:left-0"
+        size="w-36 h-36 lg:w-60 lg:h-60"
       />
     </section>
   );
