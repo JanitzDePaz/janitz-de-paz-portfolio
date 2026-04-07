@@ -1,19 +1,26 @@
+import { aboutMeTech } from "../../constants/aboutMeTech";
+import { PrimaryButton } from "../ui/PrimaryButton";
+import { Title } from "../ui/Title";
+import arrowDown from "../../assets/icons/arrowDown.svg";
+
 export const AboutMe = () => (
-  <section className="mt-(--header-height)">
-    <div className="w-3/5 p-20 grid grid-cols-[0.3fr_0.7fr] grid-rows-2 border border-(--primary-border) rounded-2xl">
-      <img src="" alt="" className="aspect-square min-w-40 rounded-full border-2" />
-      <div>
-        <p>
-          Estudiante de 1º de DAW apasionado por el desarrollo web Full-stack.
-          Enfocado en construir soluciones escalables con React y TypeScript,
-          priorizando siempre la calidad del código y la arquitectura limpia.
-        </p>
+  <section className="text-center dotBackgorund" id="SobreMi">
+    <div className="flex flex-col justify-center items-center gap-8 w-4/5">
+      <Title>Sobre mi</Title>
+      <p className="text-lg w-4/5">
+        Estudiante de 1º de DAW apasionado por el desarrollo web Full-stack.
+        Enfocado en construir soluciones escalables con React y TypeScript,
+        priorizando siempre la calidad del código y la arquitectura limpia.
+      </p>
+      <div className="p-10 grid grid-cols-3 grid-rows-2 gap-5">
+        { aboutMeTech.map((icon) => (
+          <img key={icon.name} alt={icon.alt} src={icon.url} className="w-full aspect-square"/>
+        ))}
       </div>
-      <ul className="list-disc flex flex-col justify-center gap-3.5">
-        <li>Linkedin</li>
-        <li>Github</li>
-      </ul>
-      <div className="border-2">NO SE QUE PONER</div>
+      <PrimaryButton href="#SobreMi">Mis proyectos</PrimaryButton>
+      <a href="#SobreMi" className="anim animate-bounce">
+          <img src={arrowDown} alt="Flecha direccional" />
+        </a>
     </div>
   </section>
 );
