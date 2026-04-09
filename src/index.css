@@ -41,3 +41,23 @@ section {
   background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1h22v22H1z' fill='none' stroke='none'/%3E%3Ccircle cx='1' cy='1' r='1' fill='%231f1f1f'/%3E%3C/svg%3E");
   background-position: center;
 }
+
+.primaryButton {
+  font-family: (var(--font-body));
+  font-weight: 600;
+  font-size: 1.125rem;
+  background-color: white;
+  color: black;
+  padding-inline: 4rem;
+  padding-block: 0.5rem;
+  border-radius: 50px;
+  transition: all 200ms ease;
+}
+
+.primaryButton:hover {
+  background-color: #cacaca;
+  transform: scale(1.03);
+}
+.primaryButton:active {
+  transform: scale(0.95);
+}

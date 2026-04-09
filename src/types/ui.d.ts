@@ -3,7 +3,7 @@ type SpotlightTypes = {
   size: string;
   position: string;
 };
-type PrimaryButtonType = {
+type ActionButtonType = {
   href?: string;
   children: React.ReactNode;
   className?: string;

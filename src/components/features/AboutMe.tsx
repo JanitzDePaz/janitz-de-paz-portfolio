@@ -1,5 +1,5 @@
 import { aboutMeTech } from "../../constants/aboutMeTech";
-import { PrimaryButton } from "../ui/PrimaryButton";
+import { ActionButton } from "../ui/ActionButton";
 import { Title } from "../ui/Title";
 import arrowDown from "../../assets/icons/arrowDown.svg";
 import { useEffect } from "react";
@@ -22,12 +22,12 @@ export const AboutMe = () => {
           </p>
           <hr className="hidden lg:block" />
           <div className="hidden lg:flex lg:flex-col lg:gap-5 lg:justify-center lg:items-center w-fit m-auto">
-            <PrimaryButton className="" href="#SobreMi">
+            <ActionButton className="primaryButton" href="#Proyectos">
               Mis proyectos
-            </PrimaryButton>
-            <a href="#SobreMi" className="animate-bounce">
+            </ActionButton>
+            <ActionButton className="animate-bounce" href="#Proyectos">
               <img src={arrowDown} alt="Flecha direccional" />
-            </a>
+            </ActionButton>
           </div>
         </div>
 
@@ -42,10 +42,12 @@ export const AboutMe = () => {
           ))}
         </div>
         <div className="lg:hidden flex flex-col gap-5 justify-center items-center w-fit">
-          <PrimaryButton href="#SobreMi">Mis proyectos</PrimaryButton>
-          <a href="#SobreMi" className="animate-bounce">
+          <ActionButton className="primaryButton" href="#Proyectos">
+            Mis proyectos
+          </ActionButton>
+          <ActionButton className="animate-bounce" href="#Proyectos">
             <img src={arrowDown} alt="Flecha direccional" />
-          </a>
+          </ActionButton>
         </div>
       </div>
     </section>

@@ -1,12 +1,12 @@
 import { useEffect } from "react";
 import arrowDown from "../../assets/icons/arrowDown.svg";
-import { PrimaryButton } from "../ui/PrimaryButton";
+import { ActionButton } from "../ui/ActionButton";
 import { Spotlight } from "../ui/Spotlight";
 import { scrollAnimation } from "../../animations/scrollAnimation";
 import { gsap } from "gsap";
 import { Title } from "../ui/Title";
 import { Subtitle } from "../ui/Subtitle";
-import { scrollToId } from "../../animations/scrollToId";
+
 export const Hero = () => {
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -32,18 +32,13 @@ export const Hero = () => {
           React & TypeScript <br /> developer
         </Subtitle>
         <div className="anim">
-          <PrimaryButton href="#SobreMi" >Conóceme</PrimaryButton>
+          <ActionButton className="primaryButton" href="#SobreMi">
+            Conóceme
+          </ActionButton>
         </div>
-        <a
-          href="#SobreMi"
-          onClick={(e) => {
-            e.preventDefault(); // Evita que el navegador salte de golpe
-            scrollToId("#SobreMi");
-          }}
-          className="anim animate-bounce"
-        >
+        <ActionButton href="#SobreMi" className="anim animate-bounce">
           <img src={arrowDown} alt="Flecha direccional" />
-        </a>
+        </ActionButton>
       </div>
       <Spotlight
         color="bg-sky-500/60"
