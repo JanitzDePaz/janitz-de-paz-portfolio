@@ -6,6 +6,7 @@ import { scrollAnimation } from "../../animations/scrollAnimation";
 import { gsap } from "gsap";
 import { Title } from "../ui/Title";
 import { Subtitle } from "../ui/Subtitle";
+import { scrollToId } from "../../animations/scrollToId";
 export const Hero = () => {
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -26,16 +27,21 @@ export const Hero = () => {
   return (
     <section className="text-center relative">
       <div className="flex flex-col gap-8 justify-center items-center">
-        <Title className="anim">
-          Janitz De Paz
-        </Title>
+        <Title className="anim">Janitz De Paz</Title>
         <Subtitle className="anim">
           React & TypeScript <br /> developer
         </Subtitle>
         <div className="anim">
-          <PrimaryButton href="#SobreMi">Conóceme</PrimaryButton>
+          <PrimaryButton href="#SobreMi" >Conóceme</PrimaryButton>
         </div>
-        <a href="#SobreMi" className="anim animate-bounce">
+        <a
+          href="#SobreMi"
+          onClick={(e) => {
+            e.preventDefault(); // Evita que el navegador salte de golpe
+            scrollToId("#SobreMi");
+          }}
+          className="anim animate-bounce"
+        >
           <img src={arrowDown} alt="Flecha direccional" />
         </a>
       </div>

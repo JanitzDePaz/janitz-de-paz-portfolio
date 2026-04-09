@@ -1,3 +1,5 @@
+import { scrollToId } from "../../animations/scrollToId";
+
 export const PrimaryButton = ({
   href,
   children,
@@ -10,7 +12,14 @@ export const PrimaryButton = ({
   }
 
   return (
-    <a href={href} className={buttonStyle}>
+    <a
+      href={href}
+      className={buttonStyle}
+      onClick={(e) => {
+        e.preventDefault(); // Evita que el navegador salte de golpe
+        scrollToId(href);
+      }}
+    >
       {children}
     </a>
   );
