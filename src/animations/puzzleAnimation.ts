@@ -7,6 +7,9 @@ export const puzzleAnimation = () => {
   mm.add({ isDesktop: desktop, isMobile: mobile }, () => {
     const tl = gsap.timeline({
       repeat: -1,
+      defaults: {
+        duration: 0.8, ease: "power2.inOut", delay: 0.2
+      }
     });
     const icons: HTMLElement[] = gsap.utils.toArray(".puzzleAnim");
     const distanceX = icons[1].offsetLeft - icons[0].offsetLeft;
