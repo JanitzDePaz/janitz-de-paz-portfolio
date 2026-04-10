@@ -5,11 +5,9 @@ import { useShallow } from "zustand/shallow";
 
 export const MobileMenu = () => {
   const openMenu = headerMenu(useShallow((s) => s.openMenu));
-  const setMenu = headerMenu.getState().setMenu
-  const width = headerMenu((s) => s.width);
-  const mobileWidth = headerMenu.getState().mobileWidth;
+  const setMenu = headerMenu.getState().setMenu;
 
-  if (width > mobileWidth) return null;
+
   return (
     <nav
       className={clsx(
