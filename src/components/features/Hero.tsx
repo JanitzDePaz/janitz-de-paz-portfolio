@@ -25,7 +25,7 @@ export const Hero = () => {
   }, []);
 
   return (
-    <section className="text-center relative">
+    <section className="text-center relative" id="Inicio">
       <div className="flex flex-col gap-8 justify-center items-center">
         <Title className="anim">Janitz De Paz</Title>
         <Subtitle className="anim">

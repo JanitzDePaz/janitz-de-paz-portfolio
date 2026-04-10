@@ -2,11 +2,11 @@ import clsx from "clsx";
 import { headerItems } from "../../../constants/headerItems";
 import { headerMenu } from "../../../stores/headerStore";
 import { useShallow } from "zustand/shallow";
+import { scrollToId } from "../../../animations/scrollToId";
 
 export const MobileMenu = () => {
   const openMenu = headerMenu(useShallow((s) => s.openMenu));
   const setMenu = headerMenu.getState().setMenu;
-
 
   return (
     <nav
@@ -20,9 +20,17 @@ export const MobileMenu = () => {
           <li
             key={item.id}
             className="text-(--text-muted) hover:text-(--text-main)"
-            
           >
-            <a href={item.link} onClick={() => setMenu(false)}>{item.name}</a>
+            <a
+              href={item.link}
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToId(item.link);
+                setMenu(false);
+              }}
+            >
+              {item.name}
+            </a>
           </li>
         ))}
       </ul>

@@ -4,6 +4,7 @@ import headerMenuButton from "../../../assets/icons/headerMenu.svg";
 import { headerMenu } from "../../../stores/headerStore";
 import clsx from "clsx";
 import { useShallow } from "zustand/shallow";
+import { scrollToId } from "../../../animations/scrollToId";
 
 export const Navbar = () => {
   const width = headerMenu(useShallow((s) => s.width));
@@ -40,7 +41,10 @@ export const Navbar = () => {
               key={item.id}
               className="text-(--text-muted) hover:text-(--text-main)"
             >
-              <a href={item.link}>{item.name}</a>
+              <a href={item.link} onClick={(e) => {
+                e.preventDefault();
+                scrollToId(item.link)
+              }}>{item.name}</a>
             </li>
           ))}
         </ul>
