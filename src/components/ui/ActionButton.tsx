@@ -1,12 +1,23 @@
 import { scrollToId } from "../../animations/scrollToId";
+import { headerMenu } from "../../stores/headerStore";
 
 export const ActionButton = ({
   href,
   children,
   className = "",
 }: ActionButtonType) => {
+  const setMenu = headerMenu((e) => e.setMenu);
   if (href == null || href == "") {
-    return <button className={className}>{children}</button>;
+    return (
+      <button
+        className={className}
+        onClick={() => {
+          setMenu(false);
+        }}
+      >
+        {children}
+      </button>
+    );
   }
 
   return (
@@ -14,8 +25,9 @@ export const ActionButton = ({
       href={href}
       className={className}
       onClick={(e) => {
-        e.preventDefault(); // Evita que el navegador salte de golpe
+        e.preventDefault();
         scrollToId(href);
+        setMenu(false);
       }}
     >
       {children}
