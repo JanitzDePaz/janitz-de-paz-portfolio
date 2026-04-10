@@ -2,10 +2,16 @@ import { useEffect } from "react";
 import { MobileMenu } from "./MobileMenu";
 import { Navbar } from "./Navbar";
 import { headerMenu } from "../../../stores/headerStore";
+import { useShallow } from "zustand/shallow";
 export const Header = () => {
-  const setWidth = headerMenu((e) => e.setWidth);
-  const setMenu = headerMenu((e) => e.setMenu);
-  const width = headerMenu((s) => s.width);
+  const { setWidth, setMenu, width } = headerMenu(
+    useShallow((s) => ({
+      setWidth: s.setWidth,
+      setMenu: s.setMenu,
+      width: s.width,
+    })),
+  );
+
   const mobileWidth = headerMenu.getState().mobileWidth;
   useEffect(() => {
     const changeWidth = () => {
@@ -18,7 +24,7 @@ export const Header = () => {
     return () => {
       window.removeEventListener("resize", changeWidth);
     };
-  }, [setWidth, setMenu]);
+  }, []);
 
   return (
     <header className="fixed inset-0 h-(--header-height) z-50">

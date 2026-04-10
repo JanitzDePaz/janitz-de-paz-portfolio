@@ -5,8 +5,7 @@ import { useShallow } from "zustand/shallow";
 import { scrollToId } from "../../../animations/scrollToId";
 
 export const MobileMenu = () => {
-  const openMenu = headerMenu(useShallow((s) => s.openMenu));
-  const setMenu = headerMenu.getState().setMenu;
+  const { openMenu, setMenu}  = headerMenu(useShallow((s) => ({openMenu: s.openMenu, setMenu: s.setMenu})));
 
   return (
     <nav

@@ -7,20 +7,17 @@ export const ActionButton = ({
   className = "",
 }: ActionButtonType) => {
   const setMenu = headerMenu((e) => e.setMenu);
-  if (href == null || href == "") {
-    return (
-      <button
-        className={className}
-        onClick={() => {
-          setMenu(false);
-        }}
-      >
-        {children}
-      </button>
-    );
-  }
 
-  return (
+  return href == null || href == "" ? (
+    <button
+      className={className}
+      onClick={() => {
+        setMenu(false);
+      }}
+    >
+      {children}
+    </button>
+  ) : (
     <a
       href={href}
       className={className}
