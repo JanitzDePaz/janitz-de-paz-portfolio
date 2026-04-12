@@ -1,0 +1,55 @@
+export const projectsData = [
+  {
+    projectId: 1,
+    name: "Seat Reservation System",
+    description:
+      "Mi primer gran salto al Full-stack. Es un sistema para reservar asientos donde el usuario elige su sitio, el sistema comprueba que esté libre y guarda la reserva.",
+    aprendizaje:
+      "Aprendí cómo conectar un frontend en React con una base de datos real, y sobre todo, a valorar la consistencia de los datos cuando vienen del servidor.",
+    retos: [
+      "Al ser mi primer proyecto, no usaba estados globales y por ello tuve que pasar useStates a través de componentes.",
+      "Sincronizar la interfaz para que los asientos cambien de color y estado según lo que responde la base de datos en tiempo real.",
+      "Montar mi primera API desde cero con Node y Express, entendiendo cómo se comunican cliente y servidor.",
+    ],
+    tech: ["React", "TypeScript", "Node.js", "Express", "MongoDB"],
+    botones: [
+      {
+        texto: "Github",
+        enlace: "https://github.com/JanitzDePaz/seat-reservation-system.git",
+      },
+    ],
+  },
+  {
+    projectId: 2,
+    name: "Plug In Ecommerce",
+    description:
+      "Este es mi proyecto más grande hasta ahora, una tienda de periféricos. Tuve la idea de hacer un ecommerce por su escalabilidad y he usado este proyecto para probar tecnologías del mundo del desarrollo web",
+    aprendizaje:
+      "En el aprendizaje de este proyecto destaca Spring Boot. Aunque entiendo la lógica y el código de Spring, todavía me cuesta mucho hacerlo desde cero sin apoyo y sé que me queda un mundo por aprender.",
+    retos: [
+      "Aprender Spring Boot desde cero. He dado Java en clase, pero pasar de lo básico a Spring es un paso muy grande que estoy dando ahora mismo.",
+      "La landing page ha sido un verdadero reto: me costó muchísimo tiempo pelearme con Three.js por los tipos de TS y montar el Typing Test.",
+      "Me está costando aprender a hacer el carrito, el no tener un esquema claro de los requisitos ha hecho que sea un dolor de cabeza.",
+    ],
+    tech: [
+      "Spring Boot",
+      "PostgreSQL",
+      "React Router",
+      "Zustand",
+      "GSAP",
+      "Vercel",
+      "Render",
+      "Neon",
+    ],
+    botones: [
+      {
+        texto: "Github",
+        enlace: "https://github.com/JanitzDePaz/plug-in-ecommerce.git",
+      },
+      {
+        texto: "Live Site",
+        enlace: "https://plug-in-ecommerce.vercel.app",
+      },
+    ],
+  },
+];
