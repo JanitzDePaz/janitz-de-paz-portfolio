@@ -10,13 +10,7 @@ import gsap from "gsap";
 export const AboutMe = () => {
   useEffect(() => {
     const ctx = puzzleAnimation();
-    return () => {
-      ctx.revert();
-    };
-  }, []);
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
+    const close = gsap.context(() => {
       scrollAnimation({
         className: ".aboutMeAnim",
         direction: "up",
@@ -27,6 +21,7 @@ export const AboutMe = () => {
     });
     return () => {
       ctx.revert();
+      close.revert();
     };
   }, []);
   return (
@@ -47,10 +42,7 @@ export const AboutMe = () => {
               </ActionButton>
             </div>
             <div className="aboutMeAnim">
-              <ActionButton
-                className="animate-bounce"
-                href="#Proyectos"
-              >
+              <ActionButton className="animate-bounce" href="#Proyectos">
                 <img src={arrowDown} alt="Flecha direccional" />
               </ActionButton>
             </div>
