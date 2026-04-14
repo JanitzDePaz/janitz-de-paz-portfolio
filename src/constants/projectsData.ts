@@ -12,12 +12,10 @@ export const projectsData = [
       "Montar mi primera API desde cero con Node y Express, entendiendo cómo se comunican cliente y servidor.",
     ],
     tech: ["React", "TypeScript", "Node.js", "Express", "MongoDB"],
-    buttons: [
-      {
-        text: "Github",
-        url: "https://github.com/JanitzDePaz/seat-reservation-system.git",
-      },
-    ],
+    GitHub: {
+      text: "Github",
+      url: "https://github.com/JanitzDePaz/seat-reservation-system.git",
+    },
   },
   {
     projectId: 2,
@@ -41,15 +39,9 @@ export const projectsData = [
       "Render",
       "Neon",
     ],
-    buttons: [
-      {
-        text: "Github",
-        url: "https://github.com/JanitzDePaz/plug-in-ecommerce.git",
-      },
-      {
-        text: "Live Site",
-        url: "https://plug-in-ecommerce.vercel.app",
-      },
-    ],
+    GitHub: {
+      text: "Github",
+      url: "https://github.com/JanitzDePaz/plug-in-ecommerce.git",
+    },
   },
 ];
