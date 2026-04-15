@@ -16,7 +16,7 @@ export const projectsData = [
     tech: ["React", "TypeScript", "Node.js", "Express", "MongoDB"],
     GitHub: {
       text: "Github",
-      url: "https://github.com/JanitzDePaz/seat-reservation-system.git",
+      url: "https://github.com/JanitzDePaz/seat-reservation-system",
     },
   },
   {
@@ -45,7 +45,7 @@ export const projectsData = [
     ],
     GitHub: {
       text: "Github",
-      url: "https://github.com/JanitzDePaz/plug-in-ecommerce.git",
+      url: "https://github.com/JanitzDePaz/plug-in-ecommerce",
     },
   },
 ];
