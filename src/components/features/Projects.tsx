@@ -1,16 +1,18 @@
 import { Title } from "../ui/Title";
 import { projectsData } from "../../constants/projectsData";
 import { ProjectCard } from "../ui/ProjectCard";
+import { ProjectDetails } from "../ui/ProjectDetails";
 
 export const Project = () => {
   return (
-    <section id="Proyectos">
+    <section id="Proyectos" className="relative">
       <div className="w-full flex flex-col items-center justify-center gap-10 md:gap-20 lg:gap-30 p-5 lg:p-15">
         <Title>Proyectos</Title>
         <div className="flex w-full flex-wrap justify-center gap-10 lg:gap-20 xl:gap-50 ">
           {projectsData.map((project) => (
             <ProjectCard
-              key={project.name}
+              key={project.projectId}
+              projectId={project.projectId}
               name={project.name}
               description={project.description}
               mediaType={project.mediaType == "image" ? "image" : "video"}
@@ -21,6 +23,7 @@ export const Project = () => {
           ))}
         </div>
       </div>
+      <ProjectDetails projectId={1} />
     </section>
   );
 };
