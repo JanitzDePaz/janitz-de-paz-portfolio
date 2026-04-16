@@ -1,4 +1,4 @@
-import { projectStore } from "../../stores/projectStore";
+import { useProjectStore } from "../../stores/projectStore";
 import { ActionButton } from "./ActionButton";
 
 export const ProjectCard = ({
@@ -9,7 +9,7 @@ export const ProjectCard = ({
   mediaAlt,
   GitHub,
 }: ProjectCardTypes) => {
-  const { setMoreInfo } = projectStore((s) => ({setMoreInfo : s.setMoreInfo}))
+  const setMoreInfo = useProjectStore((s) => s.setMoreInfo);
   return (
     <article className="w-70 sm:w-80 lg:90 xl:w-100 rounded-4xl bg-white text-black flex flex-col">
       <div className="p-6 flex flex-col h-full">

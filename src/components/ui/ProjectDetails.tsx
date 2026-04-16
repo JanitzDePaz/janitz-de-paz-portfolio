@@ -1,14 +1,11 @@
 import { useShallow } from "zustand/shallow";
 import { projectsData } from "../../constants/projectsData";
-import { projectStore } from "../../stores/projectStore";
+import { useProjectStore } from "../../stores/projectStore";
 
 export const ProjectDetails = ({ projectId }: ProjectId) => {
   const project = projectsData.find((proj) => proj.projectId === projectId);
-  const { moreInfo, setMoreInfo } = projectStore(useShallow((s) => ({
-    moreInfo: s.moreInfo,
-    setMoreInfo: s.setMoreInfo,
-  })));
-
+  const moreInfo = useProjectStore((s) => s.moreInfo);
+  const setMoreInfo = useProjectStore((s) => s.setMoreInfo);
   console.log(project);
 
   return (
