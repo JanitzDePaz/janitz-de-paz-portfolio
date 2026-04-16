@@ -4,7 +4,7 @@ import { ProjectCard } from "../ui/ProjectCard";
 
 export const Project = () => {
   return (
-    <section>
+    <section id="Proyectos">
       <div className="w-full flex flex-col items-center justify-center gap-10 md:gap-20 lg:gap-30 p-5 lg:p-15">
         <Title>Proyectos</Title>
         <div className="flex w-full flex-wrap justify-center gap-10 lg:gap-20 xl:gap-50 ">

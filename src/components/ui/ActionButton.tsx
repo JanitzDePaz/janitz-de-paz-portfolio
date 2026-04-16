@@ -21,10 +21,13 @@ export const ActionButton = ({
     <a
       href={href}
       className={className}
+      target={href.charAt(0) === "#" ? "" : "_blank"}
       onClick={(e) => {
-        e.preventDefault();
-        scrollToId(href);
-        setMenu(false);
+        if (href.charAt(0) === "#") {
+          e.preventDefault();
+          scrollToId(href);
+          setMenu(false);
+        }
       }}
     >
       {children}
