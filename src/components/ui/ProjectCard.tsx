@@ -35,7 +35,10 @@ export const ProjectCard = ({
             >
               {GitHub.text}
             </ActionButton>
-            <button className="py-3 px-6 border border-gray-400 text-black mx-2 rounded-xl flex-1 text-sm xl:text-lg duration-200 hover:bg-gray-300" onClick={() => setMoreInfo(true)}>
+            <button
+              className="py-3 px-6 border border-gray-400 text-black mx-2 rounded-xl flex-1 text-sm xl:text-lg duration-200 hover:bg-gray-300"
+              onClick={() => setMoreInfo(true)}
+            >
               Leer más
             </button>
           </div>
