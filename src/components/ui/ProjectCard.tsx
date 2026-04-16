@@ -1,3 +1,4 @@
+import { projectStore } from "../../stores/projectStore";
 import { ActionButton } from "./ActionButton";
 
 export const ProjectCard = ({
@@ -8,6 +9,7 @@ export const ProjectCard = ({
   mediaAlt,
   GitHub,
 }: ProjectCardTypes) => {
+  const { setMoreInfo } = projectStore((s) => ({setMoreInfo : s.setMoreInfo}))
   return (
     <article className="w-70 sm:w-80 lg:90 xl:w-100 rounded-4xl bg-white text-black flex flex-col">
       <div className="p-6 flex flex-col h-full">
@@ -33,9 +35,9 @@ export const ProjectCard = ({
             >
               {GitHub.text}
             </ActionButton>
-            <ActionButton className="py-3 px-6 border border-gray-400 text-black mx-2 rounded-xl flex-1 text-sm xl:text-lg duration-200 hover:bg-gray-300">
+            <button className="py-3 px-6 border border-gray-400 text-black mx-2 rounded-xl flex-1 text-sm xl:text-lg duration-200 hover:bg-gray-300" onClick={() => setMoreInfo(true)}>
               Leer más
-            </ActionButton>
+            </button>
           </div>
         </div>
       </div>
