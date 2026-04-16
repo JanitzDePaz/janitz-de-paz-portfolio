@@ -24,7 +24,7 @@ export const Header = () => {
     return () => {
       window.removeEventListener("resize", changeWidth);
     };
-  }, []);
+  }, [setWidth, setMenu]);
 
   return (
     <header className="fixed inset-0 h-(--header-height) z-50">
