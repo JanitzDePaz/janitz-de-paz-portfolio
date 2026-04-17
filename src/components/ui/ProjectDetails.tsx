@@ -21,14 +21,7 @@ export const ProjectDetails = ({ projectId }: ProjectId) => {
             <video src={project.media} className="aspect-video" />
           )}
           <h1 className="text-4xl">{project.name}</h1>
-          <div className="flex flex-col gap-3">
-            <h2 className="text-3xl">Retos</h2>
-            <ol className="flex flex-col gap-2 list-disc mx-10">
-              {project.challenges.map((challenge, i) => (
-                <li key={i}>{challenge}</li>
-              ))}
-            </ol>
-          </div>
+      
         </div>
         <div className="col-span-2 mx-20 flex flex-col gap-10">
           <div className="flex flex-col gap-3">
@@ -39,7 +32,15 @@ export const ProjectDetails = ({ projectId }: ProjectId) => {
             <h2 className="text-3xl">Aprendizaje</h2>
             <p>{project.learning}</p>
           </div>
-          <div className="flex gap-5">
+          <div className="flex flex-col gap-3">
+            <h2 className="text-3xl">Retos</h2>
+            <ol className="flex flex-col gap-2 list-disc mx-10">
+              {project.challenges.map((challenge, i) => (
+                <li key={i}>{challenge}</li>
+              ))}
+            </ol>
+          </div>
+          <div className="flex gap-5 text-center">
               {project.tech.map((tech, i) => (
                 <div key={i} className="flex flex-col">
                   <img src={tech.img} alt={`${tech.name} icon`} className="w-20"/>
