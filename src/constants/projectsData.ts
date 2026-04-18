@@ -17,8 +17,8 @@ export const projectsData = [
       { name: "React", img: "src/assets/icons/reactIcon.svg" },
       { name: "TypeScript", img: "src/assets/icons/typeScriptIcon.svg" },
       { name: "NodeJS", img: "src/assets/icons/nodeJSIcon.svg" },
-      { name: "Express", img: "src/assets/icons/ExpressIcon.svg" },
-      { name: "MongoDB", img: "src/assets/icons/MongoDBIcon.svg" },
+      { name: "Express", img: "src/assets/icons/expressIcon.png" },
+      { name: "MongoDB", img: "src/assets/icons/mongoDBIcon.svg" },
     ],
     GitHub: {
       text: "Github",
@@ -54,5 +54,6 @@ export const projectsData = [
       text: "Github",
       url: "https://github.com/JanitzDePaz/plug-in-ecommerce",
     },
+    webPage: "https://plug-in-ecommerce.vercel.app/"
   },
 ];
