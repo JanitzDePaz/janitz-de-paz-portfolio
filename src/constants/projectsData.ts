@@ -17,7 +17,7 @@ export const projectsData = [
       { name: "React", img: "src/assets/icons/reactIcon.svg" },
       { name: "TypeScript", img: "src/assets/icons/typeScriptIcon.svg" },
       { name: "NodeJS", img: "src/assets/icons/nodeJSIcon.svg" },
-      { name: "Express", img: "src/assets/icons/expressIcon.png" },
+      { name: "Express", img: "src/assets/icons/expressIcon.svg" },
       { name: "MongoDB", img: "src/assets/icons/mongoDBIcon.svg" },
     ],
     GitHub: {
