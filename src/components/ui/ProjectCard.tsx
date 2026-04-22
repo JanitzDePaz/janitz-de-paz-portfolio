@@ -9,11 +9,12 @@ export const ProjectCard = ({
   media,
   mediaAlt,
   GitHub,
+  className
 }: ProjectCardTypes) => {
   const setMoreInfo = useProjectStore((s) => s.setMoreInfo);
   const setSelectedProject = useProjectStore((s) => s.setSelectedProject);
   return (
-    <article className="w-70 sm:w-80 lg:90 xl:w-100 rounded-4xl bg-white text-black flex flex-col">
+    <article className={`w-70 sm:w-80 lg:90 xl:w-100 rounded-4xl bg-white text-black flex flex-col ${className}`}>
       <div className="p-6 flex flex-col h-full">
         {mediaType == "image" ? (
           <img

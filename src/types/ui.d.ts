@@ -21,6 +21,7 @@ type ProjectCardTypes = {
   media: string;
   mediaAlt: string;
   GitHub: ProjectCardLink;
+  className?: string;
 };
 
 type ProjectId = {
