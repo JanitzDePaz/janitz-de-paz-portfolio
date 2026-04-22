@@ -2,8 +2,10 @@ import { Title } from "../ui/Title";
 import { projectsData } from "../../constants/projectsData";
 import { ProjectCard } from "../ui/ProjectCard";
 import { ProjectDetails } from "../ui/ProjectDetails";
+import { useProjectStore } from "../../stores/projectStore";
 
 export const Project = () => {
+  const selectedProject = useProjectStore((s) => s.selectedProject)
   return (
     <section id="Proyectos" className="relative">
       <div className="w-full flex flex-col items-center justify-center gap-10 md:gap-20 lg:gap-30 p-5 lg:p-15">
@@ -23,7 +25,7 @@ export const Project = () => {
           ))}
         </div>
       </div>
-      <ProjectDetails projectId={1} />
+      <ProjectDetails projectId={selectedProject} />
     </section>
   );
 };

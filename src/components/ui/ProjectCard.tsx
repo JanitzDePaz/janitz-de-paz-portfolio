@@ -2,6 +2,7 @@ import { useProjectStore } from "../../stores/projectStore";
 import { ActionButton } from "./ActionButton";
 
 export const ProjectCard = ({
+  projectId,
   name,
   description,
   mediaType,
@@ -10,6 +11,7 @@ export const ProjectCard = ({
   GitHub,
 }: ProjectCardTypes) => {
   const setMoreInfo = useProjectStore((s) => s.setMoreInfo);
+  const setSelectedProject = useProjectStore((s) => s.setSelectedProject);
   return (
     <article className="w-70 sm:w-80 lg:90 xl:w-100 rounded-4xl bg-white text-black flex flex-col">
       <div className="p-6 flex flex-col h-full">
@@ -37,7 +39,10 @@ export const ProjectCard = ({
             </ActionButton>
             <button
               className="py-3 px-6 border border-gray-400 text-black mx-2 rounded-xl flex-1 text-sm xl:text-lg duration-200 hover:bg-gray-300"
-              onClick={() => setMoreInfo(true)}
+              onClick={() => {
+                setMoreInfo(true);
+                setSelectedProject(projectId);
+              }}
             >
               Leer más
             </button>
