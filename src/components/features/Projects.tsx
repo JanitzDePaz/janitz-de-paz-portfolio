@@ -6,6 +6,8 @@ import { useProjectStore } from "../../stores/projectStore";
 import { useEffect } from "react";
 import gsap from "gsap";
 import { scrollAnimation } from "../../animations/scrollAnimation";
+import { ActionButton } from "../ui/ActionButton";
+import arrowDown from "../../assets/icons/arrowDown.svg"
 
 export const Project = () => {
   const selectedProject = useProjectStore((s) => s.selectedProject);
@@ -29,7 +31,7 @@ export const Project = () => {
 
   return (
     <section id="Proyectos" className="relative">
-      <div className="w-full flex flex-col items-center justify-center gap-10 md:gap-20 lg:gap-30 p-5 lg:p-15">
+      <div className="w-full flex flex-col items-center justify-center gap-10 py-10 ">
         <Title className="topAnim">Proyectos</Title>
         <div className="flex w-full flex-wrap justify-center gap-10 lg:gap-20 xl:gap-50 ">
           {projectsData.map((project) => {
@@ -48,8 +50,17 @@ export const Project = () => {
             );
           })}
         </div>
+        <div className="flex flex-col gap-5 justify-center items-center w-fit">
+          <ActionButton className="primaryButton" href="#Tecnologias">
+            Tecnologias
+          </ActionButton>
+          <ActionButton className="animate-bounce" href="#Tecnologias">
+            <img src={arrowDown} alt="Flecha direccional" />
+          </ActionButton>
+        </div>
       </div>
       <ProjectDetails projectId={selectedProject} />
+      
     </section>
   );
 };
