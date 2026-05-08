@@ -4,6 +4,7 @@ import { Header } from "./components/layout/header/Header";
 import { Hero } from "./components/features/Hero";
 import { AboutMe } from "./components/features/AboutMe";
 import { Project } from "./components/features/Projects";
+import { Techs } from "./components/features/Techs";
 
 createRoot(document.getElementById("root")!).render(
   <>
@@ -12,6 +13,7 @@ createRoot(document.getElementById("root")!).render(
       <Hero />
       <AboutMe />
       <Project />
+      <Techs />
     </main>
   </>,
 );

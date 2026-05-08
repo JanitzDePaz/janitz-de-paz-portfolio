@@ -1,0 +1,17 @@
+export const techSection = [
+  { name: "React", img: "/src/assets/icons/reactIcon.svg", color: "#61DAFB" },
+  { name: "TypeScript", img: "/src/assets/icons/typeScriptIcon.svg", color: "#3178C6" },
+  { name: "NodeJS", img: "/src/assets/icons/nodeJSIcon.svg", color: "#339933" },
+  { name: "Express", img: "/src/assets/icons/expressIcon.svg", color: "#ffffff" },
+  { name: "MongoDB", img: "/src/assets/icons/mongoDBIcon.svg", color: "#47A248" },
+  { name: "React Router", img: "/src/assets/icons/reactRouterIcon.svg", color: "#CA4245" },
+  { name: "Spring Boot", img: "/src/assets/icons/springBootIcon.svg", color: "#6DB33F" },
+  { name: "PostgreSQL", img: "/src/assets/icons/postgreSQLIcon.svg", color: "#4169E1" },
+  { name: "Zustand", img: "/src/assets/icons/zustandIcon.svg", color: "#433929" },
+  { name: "GSAP", img: "/src/assets/icons/gsapIcon.svg", color: "#88CE02" },
+  { name: "Vercel", img: "/src/assets/icons/vercelIcon.svg", color: "#ffffff" },
+  { name: "Render", img: "/src/assets/icons/renderIcon.svg", color: "#46E3B7" },
+  { name: "Neon", img: "/src/assets/icons/neonIcon.svg", color: "#00E599" },
+  { name: "GitHub", img: "/src/assets/icons/githubIcon.svg", color: "#ffffff" },
+  { name: "Vite", img: "/src/assets/icons/viteIcon.svg", color: "#646CFF" },
+];
