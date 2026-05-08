@@ -1,6 +1,6 @@
 import { create } from "zustand";
 
-export const headerMenu = create<HeaderMenu>((set) => ({
+export const useHeaderStorage = create<HeaderMenu>((set) => ({
   openMenu: false,
   width: 0,
   mobileWidth: 768,

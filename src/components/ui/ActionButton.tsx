@@ -1,12 +1,12 @@
 import { scrollToId } from "../../animations/scrollToId";
-import { headerMenu } from "../../stores/headerStore";
+import { useHeaderStorage } from "../../stores/headerStore";
 
 export const ActionButton = ({
   href,
   children,
   className = "",
 }: ActionButtonType) => {
-  const setMenu = headerMenu((e) => e.setMenu);
+  const setMenu = useHeaderStorage((e) => e.setMenu);
 
   return href == null || href == "" ? (
     <button

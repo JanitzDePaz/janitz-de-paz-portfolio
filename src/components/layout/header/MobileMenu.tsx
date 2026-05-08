@@ -1,11 +1,11 @@
 import clsx from "clsx";
 import { headerItems } from "../../../constants/headerItems";
-import { headerMenu } from "../../../stores/headerStore";
+import { useHeaderStorage } from "../../../stores/headerStore";
 import { useShallow } from "zustand/shallow";
 import { scrollToId } from "../../../animations/scrollToId";
 
 export const MobileMenu = () => {
-  const { openMenu, setMenu}  = headerMenu(useShallow((s) => ({openMenu: s.openMenu, setMenu: s.setMenu})));
+  const { openMenu, setMenu}  = useHeaderStorage(useShallow((s) => ({openMenu: s.openMenu, setMenu: s.setMenu})));
 
   return (
     <nav

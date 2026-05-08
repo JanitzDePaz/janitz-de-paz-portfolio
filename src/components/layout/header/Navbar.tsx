@@ -1,15 +1,15 @@
 import { headerItems } from "../../../constants/headerItems";
 import squarePlaceholder from "../../../assets/placeholders/squarePlaceholder.png";
 import headerMenuButton from "../../../assets/icons/headerMenu.svg";
-import { headerMenu } from "../../../stores/headerStore";
+import { useHeaderStorage } from "../../../stores/headerStore";
 import clsx from "clsx";
 import { useShallow } from "zustand/shallow";
 import { scrollToId } from "../../../animations/scrollToId";
 
 export const Navbar = () => {
-  const width = headerMenu(useShallow((s) => s.width));
-  const toggleMenu = () => headerMenu.getState().toggleMenu();
-  const mobileWidth = headerMenu.getState().mobileWidth
+  const width = useHeaderStorage(useShallow((s) => s.width));
+  const toggleMenu = () => useHeaderStorage.getState().toggleMenu();
+  const mobileWidth = useHeaderStorage.getState().mobileWidth
   return (
     <div className="relative h-(--header-height) w-full bg-(--header-bg) flex justify-around items-center border-b border-(--primary-border) z-50">
       <div className="h-4/5 flex items-center justify-between gap-2">

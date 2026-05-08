@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 import { MobileMenu } from "./MobileMenu";
 import { Navbar } from "./Navbar";
-import { headerMenu } from "../../../stores/headerStore";
+import { useHeaderStorage } from "../../../stores/headerStore";
 import { useShallow } from "zustand/shallow";
 export const Header = () => {
-  const { setWidth, setMenu, width } = headerMenu(
+  const { setWidth, setMenu, width } = useHeaderStorage(
     useShallow((s) => ({
       setWidth: s.setWidth,
       setMenu: s.setMenu,
@@ -12,7 +12,7 @@ export const Header = () => {
     })),
   );
 
-  const mobileWidth = headerMenu.getState().mobileWidth;
+  const mobileWidth = useHeaderStorage.getState().mobileWidth;
   useEffect(() => {
     const changeWidth = () => {
       const newWidth = window.innerWidth;
