@@ -44,3 +44,9 @@ type GitHubData = {
   text: string;
   url: string;
 };
+
+type TechCardsType = {
+  name: string,
+  img: string,
+  color: string
+}
