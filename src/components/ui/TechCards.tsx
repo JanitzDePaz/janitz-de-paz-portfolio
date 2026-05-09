@@ -47,7 +47,7 @@ export const TechCards = ({ name, img, color }: TechCardsType) => {
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className="overflow-hidden relative flex flex-col justify-center items-center gap-5 w-50 h-50 p-8 rounded-xl bg-[#080808] border border-[#1a1a1a]"
+      className="overflow-hidden relative flex flex-col justify-center items-center gap-5 w-40 xl:w-50 h-40 xl:h-50 p-8 rounded-xl bg-[#080808] border border-[#1a1a1a]"
     >
       <div
         ref={borderRef}
@@ -55,7 +55,7 @@ export const TechCards = ({ name, img, color }: TechCardsType) => {
         style={{
           backgroundImage: `
           linear-gradient(#080808, #080808),
-          radial-gradient(200px circle at var(--x, 50%) var(--y, 50%), ${color}cc, transparent 50%)
+          radial-gradient(100px circle at var(--x, 50%) var(--y, 50%), ${color}cc, transparent 50%)
         `,
           backgroundOrigin: "border-box",
           backgroundClip: "padding-box, border-box",
@@ -63,7 +63,7 @@ export const TechCards = ({ name, img, color }: TechCardsType) => {
       />
       <div
         ref={spotlightRef}
-        className="pointer-events-none absolute w-50 h-50 rounded-full opacity-0"
+        className="pointer-events-none absolute w-25 xl:w-50 h-25 xl:h-50 rounded-full opacity-0"
         style={{
           background: `radial-gradient(circle, ${color}55 0%, ${color}22 50%, transparent 70%)`,
         }}
@@ -72,9 +72,9 @@ export const TechCards = ({ name, img, color }: TechCardsType) => {
       <img
         src={img}
         alt={`${name} icon`}
-        className="w-20 aspect-square relative z-10"
+        className="w-10 lg:w-20 aspect-square relative z-10"
       />
-      <span className="text-center relative z-10 text-white/70 text-2xl">
+      <span className="text-center relative z-10 text-white/70 text-xl lg:text-2xl">
         {name}
       </span>
     </article>
