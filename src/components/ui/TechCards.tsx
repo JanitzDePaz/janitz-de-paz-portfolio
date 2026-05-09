@@ -74,7 +74,7 @@ export const TechCards = ({ name, img, color }: TechCardsType) => {
         alt={`${name} icon`}
         className="w-10 lg:w-20 aspect-square relative z-10"
       />
-      <span className="text-center relative z-10 text-white/70 text-xl lg:text-2xl">
+      <span className="text-center relative z-10 text-white/70 text-xl lg:text-2xl pointer-events-none">
         {name}
       </span>
     </article>
