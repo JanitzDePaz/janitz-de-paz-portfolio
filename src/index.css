@@ -63,3 +63,17 @@ p {
 .primaryButton:active {
   transform: scale(0.95);
 }
+
+.contactFormInput {
+  border: 1px solid rgba(74, 72, 72, 0.698);
+  background: linear-gradient(180deg, #09090b 0%, #18181b 100%);
+  width: 500px;
+  resize: none;
+  padding-inline: 30px;
+  padding-block: 10px;
+  border-radius: 10px;
+}
+.contactFormInput:focus{
+  border: 1px solid white;
+  outline: none;
+}

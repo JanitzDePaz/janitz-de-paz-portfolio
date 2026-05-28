@@ -5,6 +5,7 @@ import { Hero } from "./components/features/Hero";
 import { AboutMe } from "./components/features/AboutMe";
 import { Project } from "./components/features/Projects";
 import { Techs } from "./components/features/Techs";
+import { Contact } from "./components/features/Contact";
 
 createRoot(document.getElementById("root")!).render(
   <>
@@ -14,6 +15,7 @@ createRoot(document.getElementById("root")!).render(
       <AboutMe />
       <Project />
       <Techs />
+      <Contact />
     </main>
   </>,
 );
