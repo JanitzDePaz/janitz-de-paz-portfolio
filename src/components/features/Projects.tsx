@@ -1,16 +1,13 @@
 import { Title } from "../ui/Title";
 import { projectsData } from "../../constants/projectsData";
 import { ProjectCard } from "../ui/ProjectCard";
-import { ProjectDetails } from "../ui/ProjectDetails";
-import { useProjectStore } from "../../stores/projectStore";
 import { useEffect } from "react";
 import gsap from "gsap";
 import { scrollAnimation } from "../../animations/scrollAnimation";
 import { ActionButton } from "../ui/ActionButton";
-import arrowDown from "../../assets/icons/arrowDown.svg"
+import arrowDown from "../../assets/icons/arrowDown.svg";
 
 export const Project = () => {
-  const selectedProject = useProjectStore((s) => s.selectedProject);
   useEffect(() => {
     const ctx = gsap.context(() => {
       scrollAnimation({
@@ -45,6 +42,10 @@ export const Project = () => {
                 media={project.media}
                 mediaAlt={`${project.name} preview`}
                 GitHub={{ text: project.GitHub.text, url: project.GitHub.url }}
+                otherLink={{
+                  text: project.otherLink?.text,
+                  url: project.otherLink?.url
+                }}
                 className="topAnim"
               />
             );
@@ -59,8 +60,8 @@ export const Project = () => {
           </ActionButton>
         </div>
       </div>
-      <ProjectDetails projectId={selectedProject} />
-      
+
+      {/*<ProjectDetails projectId={selectedProject} />*/}
     </section>
   );
 };

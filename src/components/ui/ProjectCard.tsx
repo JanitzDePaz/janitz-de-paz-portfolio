@@ -1,4 +1,3 @@
-import { useProjectStore } from "../../stores/projectStore";
 import { ActionButton } from "./ActionButton";
 
 export const ProjectCard = ({
@@ -9,12 +8,13 @@ export const ProjectCard = ({
   media,
   mediaAlt,
   GitHub,
-  className
+  otherLink,
+  className,
 }: ProjectCardTypes) => {
-  const setMoreInfo = useProjectStore((s) => s.setMoreInfo);
-  const setSelectedProject = useProjectStore((s) => s.setSelectedProject);
   return (
-    <article className={`w-70 sm:w-80 lg:90 xl:w-100 rounded-4xl bg-white text-black flex flex-col ${className}`}>
+    <article key={projectId}
+      className={`w-70 sm:w-80 lg:90 xl:w-100 rounded-4xl bg-white text-black flex flex-col ${className}`}
+    >
       <div className="p-6 flex flex-col h-full">
         {mediaType == "image" ? (
           <img
@@ -38,15 +38,14 @@ export const ProjectCard = ({
             >
               {GitHub.text}
             </ActionButton>
-            <button
-              className="py-3 px-6 border border-gray-400 text-black mx-2 rounded-xl flex-1 text-sm xl:text-lg duration-200 hover:bg-gray-300"
-              onClick={() => {
-                setMoreInfo(true);
-                setSelectedProject(projectId);
-              }}
-            >
-              Leer más
-            </button>
+            {otherLink.text == null ? null : (
+              <ActionButton
+                href={otherLink.url}
+                className="py-4 px-6 bg-white text-black border border-gray-300 rounded-xl flex-1 mx-2 text-sm xl:text-lg hover:bg-gray-200"
+              >
+                {otherLink.text}
+              </ActionButton>
+            )}
           </div>
         </div>
       </div>
