@@ -5,8 +5,8 @@ export const Techs = () => {
   return (
     <section id="Tecnologias">
       <div className="flex justify-center items-center flex-wrap gap-10 p-20">
-        {techSection.map((obj) => (
-          <TechCards name={obj.name} img={obj.img} color={obj.color} />
+        {techSection.map((obj, i) => (
+          <TechCards key={i} name={obj.name} img={obj.img} color={obj.color} />
         ))}
       </div>
     </section>
