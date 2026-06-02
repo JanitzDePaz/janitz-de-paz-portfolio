@@ -24,17 +24,17 @@ export const Contact = () => {
   }, []);
 
   return (
-    <section className="gap-30">
-      <div className="flex flex-col gap-5 w-1/3">
+    <section className="gap-5 p-5 lg:gap-20 flex-col lg:flex-row" id="Contacto">
+      <div className="flex flex-col gap-3 lg:gap-5 p-2 w-3/4 lg:w-1/3">
         <Title>¿Hablamos?</Title>
-        <Subtitle>Contruyamos algo juntos</Subtitle>
-        <p className="text-lg">
-          Estudiante de 1º de DAW apasionado por el desarrollo web Full-stack.
-          Enfocado en construir soluciones escalables con React y TypeScript,
-          priorizando siempre la calidad del código y la arquitectura limpia.
+        <Subtitle>Llevemos tus ideas al siguiente nivel</Subtitle>
+        <p className="text-xs  lg:text-lg">
+          Desarrollador Full-stack con foco en React y TypeScript. Me
+          especializo en construir aplicaciones modernas, optimizadas y con un
+          código limpio que garantice un crecimiento sostenible.
         </p>
         <hr />
-        <div className="flex gap-5">
+        <div className="flex flex-wrap gap-5">
           <ActionButton
             href="www.linkedin.com/in/janitz-de-paz"
             className="primaryButton"
@@ -52,7 +52,7 @@ export const Contact = () => {
 
       <form
         onSubmit={handleSubmit}
-        className="border border-gray-700/70 bg-[#0e0d0d] flex flex-col justify-center items-center gap-5 p-10 rounded-2xl relative "
+        className="border border-gray-700/70 bg-[#0e0d0d] flex flex-col justify-center items-center gap-5 p-5 lg:p-10 rounded-2xl relative w-3/4 lg:w-1/3"
       >
         <input
           type="text"
@@ -78,12 +78,13 @@ export const Contact = () => {
           name="message"
           required
           placeholder="Mensaje"
-          className="contactFormInput h-40"
+          className="contactFormInput h-20 xl:h-40"
         ></textarea>
-        <div ref={captchaRef}></div>
+        <div className="scale-50 lg:scale-100" ref={captchaRef}></div>
+
         <button
           type="submit"
-          className="w-fit h-fit py-2 px-20 bg-gray-300/90 text-[#0e0d0d] rounded-full cursor-pointer aspec"
+          className="primaryButton"
           disabled={!captchaToken}
         >
           Enviar

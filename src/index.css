@@ -50,7 +50,7 @@ p {
   font-size: 1.125rem;
   background-color: white;
   color: black;
-  padding-inline: 4rem;
+  padding-inline: 3rem;
   padding-block: 0.5rem;
   border-radius: 50px;
   transition: all 200ms ease;
@@ -67,13 +67,29 @@ p {
 .contactFormInput {
   border: 1px solid rgba(74, 72, 72, 0.698);
   background: linear-gradient(180deg, #09090b 0%, #18181b 100%);
-  width: 500px;
   resize: none;
-  padding-inline: 30px;
+  width: 100%;
+  padding-inline: 10px;
   padding-block: 10px;
   border-radius: 10px;
 }
-.contactFormInput:focus{
+.contactFormInput:focus {
   border: 1px solid white;
   outline: none;
+}
+
+
+@media (max-width: 768px) {
+  .primaryButton {
+    font-size: 1rem;
+    padding-inline: 2rem;
+  }
+
+  .contactFormInput {
+  border: 1px solid rgba(74, 72, 72, 0.698);
+  background: linear-gradient(180deg, #09090b 0%, #18181b 100%);
+  resize: none;
+  padding-inline: 5px;
+  border-radius: 10px;
+}
 }
