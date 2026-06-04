@@ -14,7 +14,7 @@ export const projectsData = [
   {
     projectId: 2,
     name: "Plug In Ecommerce",
-    media: "/images/seat-reservation-system-preview.png",
+    media: "/images/plug-in-preview.png",
     mediaType: "image",
     description:
       "Este es mi proyecto más grande hasta ahora, una tienda de periféricos. Tuve la idea de hacer un ecommerce por su escalabilidad y he usado este proyecto para probar tecnologías del mundo del desarrollo web",
