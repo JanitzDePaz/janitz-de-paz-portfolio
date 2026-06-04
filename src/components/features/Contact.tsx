@@ -7,6 +7,9 @@ import emailjs from "@emailjs/browser";
 export const Contact = () => {
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
 
+  console.log("Comprobando KEY:", import.meta.env.VITE_EMAILJS_SERVICE_ID);
+  console.log("Comprobando KEY:", import.meta.env.VITE_EMAILJS_TEMPLATE_ID);
+  console.log("Comprobando KEY:", import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
   const handleSubmit = (e: React.SubmitEvent) => {
     e.preventDefault();
     if (!captchaToken) return;
@@ -16,15 +19,15 @@ export const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_6uubxfj",
-        "template_o2diwhq",
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         formRef.current,
-        "zSDPtf6hDiXwIAx_r",
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
       )
       .then(() => {
         alert("email enviado");
         formRef.current?.reset();
-        window.turnstile?.reset;
+        window.turnstile?.reset();
         setCaptchaToken(null);
       })
       .catch((error) => {
