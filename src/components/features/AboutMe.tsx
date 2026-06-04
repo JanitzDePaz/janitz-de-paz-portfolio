@@ -25,7 +25,7 @@ export const AboutMe = () => {
     };
   }, []);
   return (
-    <section className="aboutMeBg" id="SobreMi">
+    <section className="aboutMeBg border-b border-white" id="SobreMi">
       <div className="flex flex-col lg:flex-row justify-center items-center py-10 gap-15 lg:gap-20">
         <div className="text-center lg:text-left flex flex-col gap-10 w-2/3 lg:w-4/12">
           <Title className="aboutMeAnim">Sobre mi</Title>

@@ -28,7 +28,6 @@ section {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  border-bottom: 1px solid white;
 }
 
 .title,
@@ -81,7 +80,6 @@ p {
   outline: none;
 }
 
-
 @media (max-width: 768px) {
   .primaryButton {
     font-size: 1rem;
@@ -89,10 +87,10 @@ p {
   }
 
   .contactFormInput {
-  border: 1px solid rgba(74, 72, 72, 0.698);
-  background: linear-gradient(180deg, #09090b 0%, #18181b 100%);
-  resize: none;
-  padding-inline: 5px;
-  border-radius: 10px;
-}
+    border: 1px solid rgba(74, 72, 72, 0.698);
+    background: linear-gradient(180deg, #09090b 0%, #18181b 100%);
+    resize: none;
+    padding-inline: 5px;
+    border-radius: 10px;
+  }
 }

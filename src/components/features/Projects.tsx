@@ -27,7 +27,7 @@ export const Project = () => {
   }, []);
 
   return (
-    <section id="Proyectos" className="relative">
+    <section id="Proyectos" className="relative border-b border-white">
       <div className="w-full flex flex-col items-center justify-center gap-10 py-10 ">
         <Title className="topAnim">Proyectos</Title>
         <div className="flex w-full flex-wrap justify-center gap-10 lg:gap-20 xl:gap-50 ">
@@ -61,7 +61,6 @@ export const Project = () => {
         </div>
       </div>
 
-      {/*<ProjectDetails projectId={selectedProject} />*/}
     </section>
   );
 };

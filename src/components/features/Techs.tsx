@@ -5,7 +5,7 @@ import arrowDown from "../../assets/icons/arrowDown.svg";
 
 export const Techs = () => {
   return (
-    <section className="flex-col py-10" id="Tecnologias">
+    <section className="flex-col py-10 border-b border-white" id="Tecnologias">
       <div className="flex justify-center items-center flex-wrap gap-2 lg:gap-8 p-5 lg:p-10 w-screen">
         {techSection.map((obj, i) => (
           <TechCards key={i} name={obj.name} img={obj.img} color={obj.color} />
