@@ -1,4 +1,4 @@
-export const SocialLink = ({ src, href }: FooterLinkType) => (
+export const SocialLink = ({ src, href }: SocialLinkType) => (
   <a
     href={href}
     className="bg-black h-12 w-12 rounded-full flex items-center justify-center transition-colors hover:bg-gray-800"
