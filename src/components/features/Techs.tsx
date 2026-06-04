@@ -6,12 +6,12 @@ import arrowDown from "../../assets/icons/arrowDown.svg";
 export const Techs = () => {
   return (
     <section className="flex-col py-10" id="Tecnologias">
-      <div className="flex justify-center items-center flex-wrap gap-2 lg:gap-10 p-5 lg:p-20 w-screen">
+      <div className="flex justify-center items-center flex-wrap gap-2 lg:gap-8 p-5 lg:p-10 w-screen">
         {techSection.map((obj, i) => (
           <TechCards key={i} name={obj.name} img={obj.img} color={obj.color} />
         ))}
       </div>
-      <div className="lg:hidden flex flex-col gap-5 justify-center items-center w-fit">
+      <div className="flex flex-col gap-5 justify-center items-center w-fit">
         <ActionButton className="primaryButton" href="#Contacto">
           Conóceme
         </ActionButton>
