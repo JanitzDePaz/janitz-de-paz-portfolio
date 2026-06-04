@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { ActionButton } from "../ui/ActionButton";
 import { Subtitle } from "../ui/Subtitle";
 import { Title } from "../ui/Title";
+import emailjs from "@emailjs/browser";
 
 export const Contact = () => {
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
@@ -9,9 +10,30 @@ export const Contact = () => {
   const handleSubmit = (e: React.SubmitEvent) => {
     e.preventDefault();
     if (!captchaToken) return;
+    if (!formRef.current) return;
+
     console.log("Listo para enviar con token:", captchaToken);
+
+    emailjs
+      .sendForm(
+        "service_6uubxfj",
+        "template_o2diwhq",
+        formRef.current,
+        "zSDPtf6hDiXwIAx_r",
+      )
+      .then(() => {
+        alert("email enviado");
+        formRef.current?.reset();
+        window.turnstile?.reset;
+        setCaptchaToken(null);
+      })
+      .catch((error) => {
+        console.error("Error al enviar:", error);
+        alert("Hubo un error al enviar el mensaje. Inténtalo de nuevo.");
+      });
   };
   const captchaRef = useRef<HTMLDivElement>(null);
+  const formRef = useRef<HTMLFormElement>(null);
 
   useEffect(() => {
     if (window.turnstile && captchaRef.current) {
@@ -36,7 +58,7 @@ export const Contact = () => {
         <hr />
         <div className="flex flex-wrap gap-5">
           <ActionButton
-            href="www.linkedin.com/in/janitz-de-paz"
+            href="https://linkedin.com/in/janitz-de-paz"
             className="primaryButton"
           >
             LinkedIn
@@ -51,26 +73,27 @@ export const Contact = () => {
       </div>
 
       <form
+        ref={formRef}
         onSubmit={handleSubmit}
         className="border border-gray-700/70 bg-[#0e0d0d] flex flex-col justify-center items-center gap-5 p-5 lg:p-10 rounded-2xl relative w-3/4 lg:w-1/3"
       >
         <input
           type="text"
-          name="user_name"
+          name="name"
           required
           placeholder="Nombre"
           className="contactFormInput"
         />
         <input
           type="email"
-          name="user_email"
+          name="email"
           required
           placeholder="Email"
           className="contactFormInput"
         />
         <input
           type="text"
-          name="user_company"
+          name="company"
           placeholder="Empresa (opcional)"
           className="contactFormInput"
         />
