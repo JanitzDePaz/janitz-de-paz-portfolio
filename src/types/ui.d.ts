@@ -21,24 +21,12 @@ type ProjectCardTypes = {
   media: string;
   mediaAlt: string;
   GitHub: ProjectCardLink;
-  otherLink?: ProjectCardLink; 
+  otherLink?: ProjectCardLink;
   className?: string;
 };
 
 type ProjectId = {
-  projectId: number
-}
-
-type ProjectInfoType = {
   projectId: number;
-  name: string;
-  media: string;
-  mediaType: "video" | "image";
-  description: string;
-  learning: string;
-  challenges: string[];
-  tech: string[];
-  GitHub: GitHubData;
 };
 
 type GitHubData = {
@@ -47,7 +35,12 @@ type GitHubData = {
 };
 
 type TechCardsType = {
-  name: string,
-  img: string,
-  color: string
-}
+  name: string;
+  img: string;
+  color: string;
+};
+
+type SocialLinkType = {
+  src: string;
+  href: string;
+};

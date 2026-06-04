@@ -11,6 +11,9 @@
 
   --header-bg: rgb(27, 27, 29);
   --header-height: 7vh;
+
+  --footer-bg: rgb(27, 27, 29);
+  --footer-height: 7vh;
 }
 
 body {
