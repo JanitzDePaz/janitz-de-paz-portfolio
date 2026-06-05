@@ -3,9 +3,14 @@ import { ActionButton } from "../ui/ActionButton";
 import { Subtitle } from "../ui/Subtitle";
 import { Title } from "../ui/Title";
 import emailjs from "@emailjs/browser";
+import closeCross from "/icons/closeCross.svg";
+import clsx from "clsx";
 
 export const Contact = () => {
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
+
+  const [modalMessage, setModalMessage] = useState<string | null>(null);
+  const [showModal, setShowModal] = useState<boolean>(false);
 
   const handleSubmit = (e: React.SubmitEvent) => {
     e.preventDefault();
@@ -20,14 +25,20 @@ export const Contact = () => {
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
       )
       .then(() => {
-        alert("email enviado");
         formRef.current?.reset();
         window.turnstile?.reset();
         setCaptchaToken(null);
+        setModalMessage(
+          "Mail mandado correctamente. Muchas gracias por contactar conmigo!",
+        );
+        setShowModal(true);
       })
       .catch((error) => {
-        console.error("Error al enviar:", error);
-        alert("Hubo un error al enviar el mensaje. Inténtalo de nuevo.");
+        console.error("Error al enviar email:", error);
+        setModalMessage(
+          "Hubo un error al enviar el mensaje. Inténtalo de nuevo.",
+        );
+        setShowModal(true);
       });
   };
   const captchaRef = useRef<HTMLDivElement>(null);
@@ -44,7 +55,10 @@ export const Contact = () => {
   }, []);
 
   return (
-    <section className="gap-5 p-5 lg:gap-20 flex-col lg:flex-row" id="Contacto">
+    <section
+      className="gap-5 p-5 lg:gap-20 flex-col lg:flex-row relative"
+      id="Contacto"
+    >
       <div className="flex flex-col gap-3 lg:gap-5 p-2 w-3/4 lg:w-1/3">
         <Title>¿Hablamos?</Title>
         <Subtitle>Llevemos tus ideas al siguiente nivel</Subtitle>
@@ -111,6 +125,32 @@ export const Contact = () => {
           Enviar
         </button>
       </form>
+
+      <dialog
+        className={clsx(
+          showModal ? "flex" : "hidden",
+          "absolute border-2 border-gray-300 hover:border-gray-100 transition-colors duration-200 bg-[#0e0d0d] p-4 rounded-2xl w-80 aspect-video top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2",
+        )}
+        open={showModal}
+      >
+        <div className="relative w-full h-full flex flex-col justify-center items-center">
+          <button
+            className="absolute top-0 right-0"
+            onClick={() => setShowModal(false)}
+          >
+            <img src={closeCross} alt="Close cross icon" className="w-6 h-6" />
+          </button>
+          <p className="text-gray-200 text-sm lg:text-base font-medium leading-relaxed px-2 text-center">
+            {modalMessage}
+          </p>
+          <button
+            onClick={() => setShowModal(false)}
+            className="mt-2 px-6 py-2 bg-white text-black font-semibold text-sm rounded-xl hover:bg-gray-200 transition-colors"
+          >
+            Entendido
+          </button>
+        </div>
+      </dialog>
     </section>
   );
 };
