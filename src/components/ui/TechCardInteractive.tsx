@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import gsap from "gsap";
 
-export const TechCards = ({ name, img, color }: TechCardsType) => {
+export const TechCardInteractive = ({ name, img, color }: TechCardsType) => {
   const spotlightRef = useRef<HTMLDivElement>(null);
   const cardRef = useRef<HTMLDivElement>(null);
   const borderRef = useRef<HTMLDivElement>(null);
