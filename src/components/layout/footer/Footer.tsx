@@ -3,7 +3,7 @@ import LinkedInIcon from "../../../assets/icons/linkedInIcon.svg";
 import { SocialLink } from "../../ui/SocialLink";
 export const Footer = () => {
   return (
-    <footer className="flex justify-around items-center h-(--footer-height) bg-(--footer-bg) border-t-2 border-(--primary-border)">
+    <footer className="flex justify-around items-center py-1 bg-[#1b1b1d] border-t-2 border-(--primary-border)">
       <div className="flex gap-4">
         <SocialLink src={GitHubIcon} href="https://github.com/JanitzDePaz" />
         <SocialLink
