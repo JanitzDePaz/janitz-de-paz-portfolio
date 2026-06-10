@@ -35,17 +35,15 @@ export const AboutMe = () => {
             priorizando siempre la calidad del código y la arquitectura limpia.
           </p>
           <hr className="hidden lg:block aboutMeAnim" />
-          <div className="hidden lg:flex lg:flex-col lg:gap-5 lg:justify-center lg:items-center w-fit m-auto">
+          <div className="hidden lg:flex lg:flex-col lg:gap-8 lg:justify-center lg:items-center w-fit m-auto">
             <div className="aboutMeAnim">
               <ActionButton className="primaryButton" href="#Proyectos">
                 Mis proyectos
               </ActionButton>
             </div>
-            <div className="aboutMeAnim">
-              <ActionButton className="animate-bounce" href="#Proyectos">
+              <ActionButton className="aboutMeAnim animate-bounce" href="#Proyectos">
                 <img src={arrowDown} alt="Flecha direccional" />
               </ActionButton>
-            </div>
           </div>
         </div>
 
