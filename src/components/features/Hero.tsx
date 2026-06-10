@@ -29,7 +29,7 @@ export const Hero = () => {
       <div className="flex flex-col gap-8 justify-center items-center">
         <Title className="anim">Janitz De Paz</Title>
         <Subtitle className="anim">
-          React & TypeScript <br /> developer
+          React & TypeScript developer
         </Subtitle>
         <div className="anim">
           <ActionButton className="primaryButton" href="#SobreMi">

@@ -11,11 +11,11 @@ export const Navbar = () => {
   const toggleMenu = () => useHeaderStorage.getState().toggleMenu();
   const mobileWidth = useHeaderStorage.getState().mobileWidth;
   return (
-    <div className="relative h-(--header-height) w-full bg-(--header-bg) flex justify-around items-center border-b border-(--primary-border) z-50">
-      <div className="h-4/5 flex items-center justify-between gap-2">
+    <div className="relative h-(--header-height) w-full bg-(--header-bg) flex justify-between px-10 xl:px-20 items-center border-b border-(--primary-border) z-50">
+      <div className="h-4/5 flex items-center justify-between">
         <a
           href="https://github.com/JanitzDePaz"
-          className="h-full aspect-square rounded-full flex items-center justify-center"
+          className="h-full py-2 xl:py-3 aspect-square rounded-full flex items-center justify-center"
           target="_blank"
         >
           <img
@@ -24,7 +24,6 @@ export const Navbar = () => {
             className="aspect-square h-full rounded-full"
           />
         </a>
-
         <h1>Janitz De Paz</h1>
       </div>
       {width < mobileWidth ? (
