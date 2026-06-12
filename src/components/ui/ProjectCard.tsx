@@ -13,7 +13,7 @@ export const ProjectCard = ({
 }: ProjectCardTypes) => {
   return (
     <article key={projectId}
-      className={`w-70 sm:w-80 lg:90 xl:w-100 rounded-4xl bg-white text-black flex flex-col ${className}`}
+      className={`w-full h-full rounded-4xl bg-white text-black flex flex-col ${className}`}
     >
       <div className="p-6 flex flex-col h-full">
         {mediaType == "image" ? (
