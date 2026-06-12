@@ -32,7 +32,7 @@ export const Techs = () => {
           }
         })}
       </div>
-      <div className="flex flex-col gap-5 justify-center items-center w-fit">
+      <div className="flex flex-col gap-8 justify-center items-center w-fit">
         <ActionButton className="primaryButton" href="#Contacto">
           Conóceme
         </ActionButton>
