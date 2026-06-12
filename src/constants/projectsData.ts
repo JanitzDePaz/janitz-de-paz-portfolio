@@ -27,4 +27,16 @@ export const projectsData = [
       url: "https://plug-in-ecommerce.vercel.app/",
     },
   },
+  {
+    projectId: 3,
+    name: "Próximamente",
+    media: "/images/next-project.png",
+    mediaType: "image",
+    description:
+      "Espacio reservado para el siguiente gran proyecto. Actualmente en desarrollo...",
+    GitHub: {
+      text: "Más información",
+      url: "https://linkedin.com/in/janitz-de-paz",
+    },
+  },
 ];
