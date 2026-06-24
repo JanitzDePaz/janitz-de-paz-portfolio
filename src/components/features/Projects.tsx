@@ -57,7 +57,7 @@ export const Project = () => {
         opacity: isActive ? 1 : 0.3,
         filter: isActive ? "blur(0px)" : "blur(3px)",
         zIndex: isActive ? 10 : 1,
-        duration: 0.6,
+        duration: 0.75,
         y: isActive ? 0 : -100,
         ease: "power3.out",
       });

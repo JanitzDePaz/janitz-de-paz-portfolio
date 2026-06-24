@@ -35,7 +35,7 @@ export const projectsData = [
     description:
       "Espacio reservado para el siguiente gran proyecto. Actualmente en desarrollo...",
     GitHub: {
-      text: "Más información",
+      text: "LinkedIn",
       url: "https://linkedin.com/in/janitz-de-paz",
     },
   },
