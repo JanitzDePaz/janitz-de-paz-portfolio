@@ -17,7 +17,7 @@ export const Techs = () => {
         className: ".techAnim",
         direction: "up",
         distance: 30,
-        delay: 1,
+        delay: 0.2,
         start: "top 85%",
         duration: 1,
         stagger: 0.1,
@@ -30,7 +30,7 @@ export const Techs = () => {
   return (
     <section className="flex-col py-10 border-b border-white" id="Tecnologias">
       <div className="flex justify-center items-center flex-wrap gap-2 lg:gap-8 p-5 lg:p-10 w-screen techAnim">
-        {techSection.map((obj, i) => {
+        {techSection.sort((a, b) => a.name.localeCompare(b.name)).map((obj, i) => {
           if (width > 1024) {
             return (
               <TechCardInteractive
