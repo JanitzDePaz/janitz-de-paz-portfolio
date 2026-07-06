@@ -1,7 +1,12 @@
-export const TechCardStatic = ({ name, img, color }: TechCardsType) => {
+export const TechCardStatic = ({
+  name,
+  img,
+  color,
+  className,
+}: TechCardsType) => {
   return (
     <article
-      className="overflow-hidden relative flex flex-col justify-center items-center gap-2 lg:gap-5 w-20 lg:40 xl:w-50 aspect-square p-2 lg:p-8 rounded-xl bg-[#080808] border border-[#1a1a1a]"
+      className={`overflow-hidden relative flex flex-col justify-center items-center gap-2 lg:gap-5 w-20 lg:40 xl:w-50 aspect-square p-2 lg:p-8 rounded-xl bg-[#080808] border border-[#1a1a1a] ${className}`}
     >
       <div
         className="pointer-events-none absolute inset-0 rounded-xl opacity-0 border border-transparent"

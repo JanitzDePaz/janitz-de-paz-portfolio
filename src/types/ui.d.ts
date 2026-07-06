@@ -38,6 +38,7 @@ type TechCardsType = {
   name: string;
   img: string;
   color: string;
+  className: string;
 };
 
 type SocialLinkType = {

@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import gsap from "gsap";
 
-export const TechCardInteractive = ({ name, img, color }: TechCardsType) => {
+export const TechCardInteractive = ({ name, img, color, className }: TechCardsType) => {
   const spotlightRef = useRef<HTMLDivElement>(null);
   const cardRef = useRef<HTMLDivElement>(null);
   const borderRef = useRef<HTMLDivElement>(null);
@@ -47,7 +47,7 @@ export const TechCardInteractive = ({ name, img, color }: TechCardsType) => {
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className="overflow-hidden relative flex flex-col justify-center items-center gap-2 lg:gap-5 w-20 lg:40 xl:w-50 aspect-square p-2 lg:p-8 rounded-xl bg-[#080808] border border-[#1a1a1a]"
+      className={`overflow-hidden relative flex flex-col justify-center items-center gap-2 lg:gap-5 w-20 lg:40 xl:w-50 aspect-square p-2 lg:p-8 rounded-xl bg-[#080808] border border-[#1a1a1a] ${className}`}
     >
       <div
         ref={borderRef}
