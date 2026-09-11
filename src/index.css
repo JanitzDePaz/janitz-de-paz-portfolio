@@ -20,7 +20,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 section {
-  min-height: calc(100vh - var(--header-height));
+  height: calc(100vh - var(--header-height));
   display: flex;
   justify-content: center;
   align-items: center;
