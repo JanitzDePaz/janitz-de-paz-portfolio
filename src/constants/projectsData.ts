@@ -23,7 +23,7 @@ export const projectsData = [
       url: "https://github.com/JanitzDePaz/plug-in-ecommerce",
     },
     otherLink: {
-      text: "Web Page",
+      text: "Web",
       url: "https://plug-in-ecommerce.vercel.app/",
     },
   },

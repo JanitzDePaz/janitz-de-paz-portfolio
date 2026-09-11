@@ -74,7 +74,7 @@ export const Project = () => {
 
   return (
     <section id="Proyectos" className="relative border-b border-white">
-      <div className="w-full h-screen flex flex-col items-center justify-center gap-10 py-10">
+      <div className="w-full h-full flex flex-col items-center justify-center gap-5 py-10">
         <Title className="topAnim">Proyectos</Title>
         <div className="w-full flex justify-center items-center flex-1 gap-5">
           <button onClick={handlePrev} className="w-10 h-10">

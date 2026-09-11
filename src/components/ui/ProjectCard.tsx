@@ -27,21 +27,21 @@ export const ProjectCard = ({
         )}
         <div className="border border-gray-200 rounded-b-4xl flex-1 flex flex-col gap-3">
           <div className="p-6 flex-1 flex flex-col gap-4">
-            <h2 className="text-2xl font-medium">{name}</h2>
-            <p className="flex-1 text-sm">{description}</p>
+            <h2 className="text-lg lg:text-2xl font-medium">{name}</h2>
+            <p className="flex-1 text-xs">{description}</p>
           </div>
 
-          <div className="flex flex-row gap-3 justify-center border-t border-t-gray-200 py-4 text-center">
+          <div className="flex flex-row sm:gap-3 justify-center border-t border-t-gray-200 py-4 text-center">
             <ActionButton
               href={GitHub.url}
-              className="py-4 px-6 bg-black text-gray-200 hover:text-white rounded-xl flex-1 mx-2 text-sm xl:text-lg hover:bg-gray-800"
+              className="py-4 px-3 sm:px-6 bg-black text-gray-200 hover:text-white rounded-xl flex-1 mx-2 text-sm xl:text-lg hover:bg-gray-800"
             >
               {GitHub.text}
             </ActionButton>
             {otherLink.text == null ? null : (
               <ActionButton
                 href={otherLink.url}
-                className="py-4 px-6 bg-white text-black border border-gray-300 rounded-xl flex-1 mx-2 text-sm xl:text-lg hover:bg-gray-200"
+                className="py-4 px-3 sm:px-6 bg-white text-black border border-gray-300 rounded-xl flex-1 mx-2 text-sm xl:text-lg hover:bg-gray-200"
               >
                 {otherLink.text}
               </ActionButton>
