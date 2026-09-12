@@ -59,7 +59,7 @@ export const Contact = () => {
       className="gap-5 p-5 lg:gap-20 flex-col lg:flex-row relative"
       id="Contacto"
     >
-      <div className="flex flex-col gap-3 lg:gap-5 p-2 w-3/4 lg:w-1/3">
+      <div className="flex flex-col gap-3 lg:gap-5 p-2 w-full md:w-2/3 lg:w-1/3">
         <Title>¿Hablamos?</Title>
         <Subtitle>Llevemos tus ideas al siguiente nivel</Subtitle>
         <p className="text-xs  lg:text-lg">
@@ -87,7 +87,7 @@ export const Contact = () => {
       <form
         ref={formRef}
         onSubmit={handleSubmit}
-        className="border border-gray-700/70 bg-[#0e0d0d] flex flex-col justify-center items-center gap-5 p-5 lg:p-10 rounded-2xl relative w-3/4 lg:w-1/3"
+        className="border border-gray-700/70 bg-[#0e0d0d] flex flex-col justify-center items-center gap-5 p-5 lg:p-10 rounded-2xl relative w-full md:w-2/3 lg:w-1/3"
       >
         <input
           type="text"
