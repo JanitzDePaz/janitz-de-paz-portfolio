@@ -29,7 +29,7 @@ export const Techs = () => {
 
   return (
     <section className="flex-col py-10 border-b border-white" id="Tecnologias">
-      <div className="flex justify-center items-center flex-wrap gap-2 lg:gap-8 p-5 lg:p-10 w-screen techAnim">
+      <div className="flex justify-center items-center flex-wrap gap-4 lg:gap-8 p-5 lg:p-10 w-screen techAnim">
         {techSection.sort((a, b) => a.name.localeCompare(b.name)).map((obj, i) => {
           if (width > 1024) {
             return (

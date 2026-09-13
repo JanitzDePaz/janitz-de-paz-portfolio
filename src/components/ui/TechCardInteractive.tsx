@@ -47,7 +47,7 @@ export const TechCardInteractive = ({ name, img, color, className }: TechCardsTy
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className={`overflow-hidden relative flex flex-col justify-center items-center gap-2 lg:gap-5 w-20 lg:40 xl:w-50 aspect-square p-2 lg:p-8 rounded-xl bg-[#080808] border border-[#1a1a1a] ${className}`}
+      className={`overflow-hidden relative flex flex-col justify-center items-center gap-2 lg:gap-5 w-20 lg:w-40 xl:w-50 aspect-square p-2 xl:p-8 rounded-xl bg-[#080808] border border-[#1a1a1a] ${className}`}
     >
       <div
         ref={borderRef}
@@ -63,7 +63,7 @@ export const TechCardInteractive = ({ name, img, color, className }: TechCardsTy
       />
       <div
         ref={spotlightRef}
-        className="pointer-events-none absolute w-25 xl:w-50 h-25 xl:h-50 rounded-full opacity-0"
+        className="pointer-events-none absolute w-30 xl:w-50 h-30 xl:h-50 rounded-full opacity-0"
         style={{
           background: `radial-gradient(circle, ${color}55 0%, ${color}22 50%, transparent 70%)`,
         }}
@@ -74,7 +74,7 @@ export const TechCardInteractive = ({ name, img, color, className }: TechCardsTy
         alt={`${name} icon`}
         className="w-10 lg:w-20 aspect-square relative z-10"
       />
-      <span className="text-center relative z-10 text-white/70 text-[0.5rem] lg:text-xl xl:text-2xl pointer-events-none">
+      <span className="text-center relative z-10 text-white/70 text-[0.8rem] lg:text-xl xl:text-2xl pointer-events-none">
         {name}
       </span>
     </article>
