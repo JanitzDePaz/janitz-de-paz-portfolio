@@ -35,8 +35,8 @@ export const projectsData = [
     description:
       "Proyecto en grupo creado durante mis practicas en Ayesa. Es una tienda de videojuegos donde el usuario puede registrarse, iniciar sesión y simular la compra de videojuegos. Utilizamos Thymeleaf, Spring Boot y H2.",
     GitHub: {
-      text: "LinkedIn",
-      url: "https://linkedin.com/in/janitz-de-paz",
+      text: "GitLab",
+      url: "https://gitlab.com/subgrupo-4/tiendavideojuegos/",
     },
   },
 ];
