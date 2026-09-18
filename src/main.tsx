@@ -10,6 +10,9 @@ import { Footer } from "./components/layout/footer/Footer";
 
 createRoot(document.getElementById("root")!).render(
   <>
+    <head>
+      <link rel="icon" type="image/x-icon" href="/icons/reactIcon.svg" />
+    </head>
     <Header />
     <main className="flex flex-col bg-(--bg-color) pt-(--header-height)">
       <Hero />
