@@ -8,14 +8,25 @@ import clsx from "clsx";
 
 export const Contact = () => {
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
-
+  const [cooldown, setCooldown] = useState<number>(0);
   const [modalMessage, setModalMessage] = useState<string | null>(null);
   const [showModal, setShowModal] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (cooldown <= 0) return;
+
+    const timer = setInterval(() => {
+      setCooldown((prev) => prev - 1);
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, [cooldown]);
 
   const handleSubmit = (e: React.SubmitEvent) => {
     e.preventDefault();
     if (!captchaToken) return;
     if (!formRef.current) return;
+    if (cooldown > 0) return;
 
     emailjs
       .sendForm(
@@ -31,6 +42,7 @@ export const Contact = () => {
         setModalMessage(
           "Mail mandado correctamente. Muchas gracias por contactar conmigo!",
         );
+        setCooldown(60);
         setShowModal(true);
       })
       .catch((error) => {
