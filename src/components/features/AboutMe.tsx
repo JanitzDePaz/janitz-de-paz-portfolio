@@ -30,7 +30,7 @@ export const AboutMe = () => {
         <div className="text-center lg:text-left flex flex-col gap-10 w-2/3 lg:w-4/12">
           <Title className="aboutMeAnim">Sobre mi</Title>
           <p className="text-lg aboutMeAnim">
-            Estudiante de 1º de DAW apasionado por el desarrollo web Full-stack.
+            Estudiante de 2º de DAW apasionado por el desarrollo web Full-stack.
             Enfocado en construir soluciones escalables con React y TypeScript,
             priorizando siempre la calidad del código y la arquitectura limpia.
           </p>
