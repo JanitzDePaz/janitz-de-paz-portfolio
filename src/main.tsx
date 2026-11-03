@@ -7,12 +7,14 @@ import { Project } from "./components/features/Projects";
 import { Techs } from "./components/features/Techs";
 import { Contact } from "./components/features/Contact";
 import { Footer } from "./components/layout/footer/Footer";
+import { Analytics } from "@vercel/analytics/next"
 
 createRoot(document.getElementById("root")!).render(
   <>
     <head>
       <link rel="icon" type="image/x-icon" href="/icons/reactIcon.svg" />
     </head>
+    <Analytics/>
     <Header />
     <main className="flex flex-col bg-(--bg-color) pt-(--header-height)">
       <Hero />
